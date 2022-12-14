@@ -9,7 +9,7 @@ namespace Laba2
 
         static void Main(string[] args)
         {
-            PrintHouse(10, 5, Color.Blue, Color.Red, Color.Magenta, Color.Cyan);
+            PrintHouse(30, 30, Color.Blue, Color.Red, Color.Magenta, Color.Cyan);
             Console.ReadKey();
         }
 

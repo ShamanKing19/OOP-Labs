@@ -33,7 +33,7 @@ namespace Laba4
                 foreach (Worker worker in team.Workers)
                 {
                     isBuildingInProcess = worker.BuildHouse(house);
-                    bool isLeaderWantsToCheck = random.Next(100) < 30;
+                    bool isLeaderWantsToCheck = random.Next(100) < 50;
                     if (isLeaderWantsToCheck)
                     {
                         leader.CheckBuildingProcess(house);

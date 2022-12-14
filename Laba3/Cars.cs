@@ -48,6 +48,8 @@ namespace Laba3
             lorry.Start();
             lorry.Start();
             Console.WriteLine("Снова не завёлся...");
+
+            Console.ReadKey();
         }
     }
 }

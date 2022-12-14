@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laba4
 {
-    public class Wall
+    public class Wall : IPart
     {
         public string Material { get; set; }
         public double Price { get; set; }

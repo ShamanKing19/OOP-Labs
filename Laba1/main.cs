@@ -11,11 +11,11 @@ namespace Laba1
                 "имя",
                 "Введите",
                 "не может быть пустым",
-                "должно быть не дленнее",
+                "должно быть не длиннее",
                 10 
              );
 
-            int intResult = ThrowMeSomeNumbers(
+            int intResult = GiveMeSomeNumbers(
                 "возраст",
                 "Введите свой",
                 "у вас слишком большой или слишком маленький",
@@ -24,7 +24,7 @@ namespace Laba1
             );
 
 
-            float floatResult = ThrowMeSomeFloatNumbers(
+            float floatResult = GiveMeSomeFloatNumbers(
                 "вес",
                 "Введите свой",
                 "у вас слишком большой или слишком маленький",
@@ -56,12 +56,11 @@ namespace Laba1
                 }
             }
             
-
             return input;
         }
 
 
-        public static int ThrowMeSomeNumbers(
+        public static int GiveMeSomeNumbers(
             string fieldName,
             string question = "Стандартный вопрос",
             string answerIfOutOfRange = "не попадает в диапазон",
@@ -70,14 +69,12 @@ namespace Laba1
         ) {
             string capitalizedWord = fieldName.Substring(0, 1).ToUpper() + fieldName.Substring(1);
             Console.WriteLine(question + " " + fieldName);
-
             
             while (true)
             {
                 string userStupidInput = Console.ReadLine(); // Слишком большое число в строку преобразует
-                bool isNumber = int.TryParse(userStupidInput, out int input); // Не люблю эту штуку
 
-                if (isNumber)
+                if (int.TryParse(userStupidInput, out int input))
                 {
                     if (input < minValue || input > maxValue)
                     {
@@ -94,7 +91,7 @@ namespace Laba1
         }
 
 
-        public static float ThrowMeSomeFloatNumbers(
+        public static float GiveMeSomeFloatNumbers(
             string fieldName,
             string question = "Стандартный вопрос",
             string answerIfOutOfRange = "не попадает в диапазон",
@@ -108,9 +105,8 @@ namespace Laba1
             while (true) 
             {
                 string userStupidInput = Console.ReadLine();
-                bool isNumber = float.TryParse(userStupidInput, out float input); 
 
-                if (isNumber)
+                if (float.TryParse(userStupidInput, out float input))
                 {
                     if (input < minValue || input > maxValue) {
                         Console.WriteLine($"{capitalizedWord} {answerIfOutOfRange}");
@@ -122,7 +118,7 @@ namespace Laba1
                     Console.WriteLine($"{question} {fieldName}");
                 }
 
-            };
+            }
         }
 
     }

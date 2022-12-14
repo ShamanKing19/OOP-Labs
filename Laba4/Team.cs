@@ -22,21 +22,6 @@ namespace Laba4
         {
             Console.WriteLine($"Нанят новый работник: {worker.Name} на должность {worker.Position} с з/п {worker.Salary}");
             this.Workers.Add(worker);
-            //Thread.Sleep(500);
-        }
-
-        public bool Work()
-        {
-            int workersCount = this.Workers.Count;
-            bool haveWorkers = workersCount > 0;
-
-            if (haveWorkers) {
-                Console.WriteLine($"\nБригада из {workersCount} рабочих начала работу\n");
-            } else {
-                Console.WriteLine("\nНекому работать :D\n");
-            }
-
-            return haveWorkers;
         }
     }
 }
